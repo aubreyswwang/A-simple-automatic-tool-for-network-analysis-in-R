@@ -1,0 +1,15 @@
+parameter,value,description
+output_folder,/your/result/directory,Output folder for all results
+data_file,/your/data/directory/file,Data file name (supports .xlsx/.xls/.csv)
+sheet_name,your sheet name,Excel worksheet name (leave empty for CSV files)
+start_col,2,Starting column number for network analysis
+end_col,12,Ending column number for network analysis
+has_weights,TRUE,Whether to use weighted analysis (TRUE/FALSE)
+weight_col,IPW_weight,Weight column name or number (leave empty if not using weights)
+node_labels,A;B;C;D;E;F;G;H;I;J,Node labels (separated by semicolons)
+node_fullnames,aaa;bbb;ccc;ddd;eee;fff;ggg;hhh;iii;jjj,Full node names (for grouping and legends)
+group_info,"ABC:1,2,3:red;DEFG:4,5,6,7:blue;HIJ:8,9,10:green",Group information (format: GroupName:NodeList:Color)
+network_title,Single Network Analysis,Network plot title
+gamma_value,0.5,EBIC gamma parameter (usually 0.25-0.5)
+n_boots_stability,1000,Bootstrap iterations for stability analysis
+n_boots_accuracy,5000,Bootstrap iterations for accuracy analysis
