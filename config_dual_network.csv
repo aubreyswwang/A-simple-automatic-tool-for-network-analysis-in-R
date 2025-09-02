@@ -1,27 +1,21 @@
 parameter,value,description
-output_folder,C:/Users/10219/Desktop/工作/湘雅二医/网络分析/Project/result,Output folder for all results
-data_file,C:/Users/10219/Desktop/工作/湘雅二医/网络分析/Project/data/mean_imputed_with_single_ipw.xlsx,Data file name (supports .xlsx/.xls/.csv)
-sheet_name,Mean_Imputed,Excel worksheet name (leave empty for CSV files)
+output_folder,/your/result/directory,Output folder for all results
+data_file,/your/data/directory/file,Data file name (supports .xlsx/.xls/.csv)
+sheet_name,your sheet name,Excel worksheet name (leave empty for CSV files)
 has_weights,TRUE,Whether to use weighted analysis (TRUE/FALSE)
-weight_col,IPW_w,Weight column name or number (leave empty if not using weights)
-
-# Network A
-start_col_A,13,Starting column number for network A
-end_col_A,22,Ending column number for network A
-node_labels_A,S-AT;S-ME;S-EF;O-ME;O-EF;O-AT;O-PS;SM;GI;EN,Node labels for Network A (separated by semicolons)
-node_fullnames_A,Subjective Attention;Subjective Memory;Subjective Executive Functions;Objective Memory;Objective Executive Functions;Objective Attention;Objective Processing Speed;Sad Mood;General Interest;Energy,Full node names for A
-group_info_A,"Subjective Cognition:1,2,3:#C8C2E4;Objective Cognition:4,5,6,7:#9BBBE1;Depressive Symptom:8,9,10:#F09BA0",Group info for A: GroupName:NodeList:Color
-network_title_A,Network A: Control Group,Title for Network A
-
-# Network B 
-start_col_B,36,Starting column number for network B
-end_col_B,45,Ending column number for network B
-node_labels_B,S-AT;S-ME;S-EF;O-ME;O-EF;O-AT;O-PS;SM;GI;EN,Node labels for Network B (must match A!)
-node_fullnames_B,Subjective Attention;Subjective Memory;Subjective Executive Functions;Objective Memory;Objective Executive Functions;Objective Attention;Objective Processing Speed;Sad Mood;General Interest;Energy,Full node names for B
-group_info_B,"Subjective Cognition:1,2,3:#C8C2E4;Objective Cognition:4,5,6,7:#9BBBE1;Depressive Symptom:8,9,10:#F09BA0",Group info for B
-network_title_B,Network B: Patient Group,Title for Network B
-
-# Common Parameters 
+weight_col,IPW_weight,Weight column name or number (leave empty if not using weights)
+start_col_A,2,Starting column number for network A
+end_col_A,11,Ending column number for network A
+node_labels_A,"A;B;C;D;E;F;G;H;I;J","Node labels for Network A (separated by semicolons)"
+node_fullnames_A,"aaa;bbb;ccc;ddd;eee;fff;ggg;hhh;iii;jjj","Full node names for A"
+group_info_A,"ABC:1,2,3:red;DEFG:4,5,6,7:blue;HIJ:8,9,10:green","Group info for A: GroupName:NodeList:Color"
+network_title_A,"Network A: Control Group",Title for Network A
+start_col_B,20,Starting column number for network B
+end_col_B,29,Ending column number for network B
+node_labels_B,"A;B;C;D;E;F;G;H;I;J","Node labels for Network B (must match A!)"
+node_fullnames_B,"aaa;bbb;ccc;ddd;eee;fff;ggg;hhh;iii;jjj","Full node names for B"
+group_info_B,"ABC:1,2,3:red;DEFG:4,5,6,7:blue;HIJ:8,9,10:green","Group info for B"
+network_title_B,"Network B: Patient Group",Title for Network B
 gamma_value,0.5,EBIC gamma parameter (usually 0.25-0.5)
 n_boots_stability,1000,Bootstrap iterations for stability analysis
 n_boots_accuracy,5000,Bootstrap iterations for accuracy analysis
