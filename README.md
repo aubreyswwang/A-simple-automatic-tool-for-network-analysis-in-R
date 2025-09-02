@@ -1,4 +1,4 @@
-# A_simple_automatic_tool_for_network_analysis_in_R
+# A simple automatic tool for network analysis in R
 Simply edit the CSV file, run the provided R script, and the results will be automatically generated and stored in the specified results folder.
 
 This tool enables network analysis for two groups. For each network, the results include：
